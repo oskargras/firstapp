@@ -10,15 +10,14 @@ from .forms import NoteForm
 class HomeView(View):
     def get(self, request):
         notes = Note.objects.all()
-        form = NoteForm()
-        ctx = {"notes": notes, "form": form}
+        ctx = {"notes": notes}
         return render(request, "note.html", ctx)
 
-    def post(self,request):
-        form = NoteForm(request.POST)
-        if form.is_valid():
-            save_it = form.save(commit=False)
-            save_it.save()
-            ctx = {"form": form}
-            return render(request, 'note.html', ctx)
-        return render(request, 'note.html', {"form":form})
+    # def post(self,request):
+    #     form = NoteForm(request.POST)
+    #     if form.is_valid():
+    #         save_it = form.save(commit=False)
+    #         save_it.save()
+    #         ctx = {"form": form}
+    #         return render(request, 'note.html', ctx)
+    #     return render(request, 'note.html', {"form":form})

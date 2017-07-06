@@ -36,7 +36,6 @@
 
         <section class="container">
         <div class="note"
-            <h2>Notes</h2>
             <ul id="sortable">
                 {% for note in notes %}
                 <li class="ui-state-default">
@@ -54,9 +53,21 @@
             <form action='#' method='POST' >
                 {% csrf_token %}
                 {{ form.as_p }}
-                <input type='submit' value='Dodaj notatkę'>
             </form>
-        <script src="static/js/note.js" charset="utf-8"></script>
+
         </section>
+
+        <footer class="container">
+          <div class="row">
+            <p class="col-sm-4">&copy; 2017 Oskar Graś</p>
+            <ul class="col-sm-8">
+            <li class="col-sm-1">  <img src="static/image/twitter.svg"></li>
+          <li class="col-sm-1"> <img src="static//image/facebook.svg"></li>
+          <li class="col-sm-1">  <img src="static//image/instagram.svg"></li>
+          <li class="col-sm-1">  <img src="static//image/medium.svg"></li>
+            </ul>
+          </div>
+        </footer>
+        <script src="static/js/note.js" charset="utf-8"></script>
         </body>
 </html>

@@ -9,6 +9,16 @@
   height: 300px;
   text-shadow: 0.25px 0.25px 0.25px #000000;
 }
+.jumbotron h2 {
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.jumbotron h3 {
+  margin: 0 0 20px;
+}
+
 .flip {
     word-break:break-all;
     margin: 0 auto;
@@ -25,3 +35,21 @@
 }
 
 
+footer {
+  font-size: 12px;
+  padding: 20px 0;
+}
+
+footer .col-sm-8 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li img {
+  width: 32px;
+  height: 32px;
+}
