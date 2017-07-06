@@ -1,17 +1,20 @@
 $(document).ready(function() {
-$(".flip").flip({
-trigger: 'click',
-        axis: 'x'
-    });
 
+$( function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+});
 
-
-$(".flip").flip({
+$(function(){
+    $(".flip").flip({
         trigger: 'click',
         axis: 'x'
     });
+});
 
-
+$('.flip').on('click', function() {
+console.log('bangla');
+});
 
 
 });
