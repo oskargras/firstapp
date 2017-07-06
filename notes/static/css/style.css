@@ -1,7 +1,14 @@
-#sortable { list-style-type: none; margin: 0; padding: 0; width: 100vw; }
+#sortable { list-style-type: none; margin: 0; padding: 0; width: 60vw; }
 #sortable li { margin: 3px 3px 3px 1; padding: 1px; width: 150px; float: left; height: 150px; font-size: 1em; text-align: center; background-color: #2184cd  }
-body { background-color: grey; }
 
+.jumbotron {
+  display: flex;
+  align-items: center;
+  background-image: url('../image/not.jpg');
+  background-size: cover;
+  height: 300px;
+  text-shadow: 0.25px 0.25px 0.25px #000000;
+}
 .flip {
     word-break:break-all;
     margin: 0 auto;
