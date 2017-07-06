@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="container">
+    <div class="row">
+        <figure class="col-sm-6">
+        <h2>Create note</h2>
+        <form action="/add_note" method="post" class="noteform">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Save</button>
+        </form>
+        </figure>
+    </div>
+<script src="static/js/counter.js"></script>
+</section>
+
+{% endblock %}

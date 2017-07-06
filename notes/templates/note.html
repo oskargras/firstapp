@@ -1,50 +1,22 @@
-<!DOCTYPE html>
-    <html>
-        <head>
-            <title>Notes</title>
+{% extends 'base.html' %}
 
-
-            <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-            <link rel="stylesheet" type="text/css" href="static/css/style.css">
-            <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-            <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-            <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
-        </head>
-
-        <body>
-        <header class="container">
-           <div class="row">
-           <h1 class="col-sm-8">Notes</h1>
-        <!--<nav class="col-sm-8 text-left">-->
-          <!--<p></p>-->
-          <!--<p></p>-->
-          <!--<p></p>-->
-        <!--</nav>-->
-           </div>
-        </header>
-        <section class="jumbotron">
-          <div class="container">
-               <div class="row text-center">
-            <h2>Your private notebook</h2>
-              <h3>Let's make some notes</h3>
-              <a class="btn btn-primary" href="#" role="button">Add note</a>
-            </div>
-          </div>
-        </section>
-
+{% block content %}
         <section class="container">
-        <div class="note"
+
             <ul id="sortable">
                 {% for note in notes %}
                 <li class="ui-state-default">
+                    <div class="topcorner">
+                        <a href="/">
+                            <img src="static/image/edit.png" class ="ribbon"/>
+                        </a>
+                    </div>
                     <div class="flip">
                         <div class="front">
                             {{ note.text }}
                         </div>
                         <div class="back">
-                            <h3>Some Text</h3>
+                            <h3>{{ note.id }}</h3>
                         </div>
                     </div>
                 </li>
@@ -57,17 +29,4 @@
 
         </section>
 
-        <footer class="container">
-          <div class="row">
-            <p class="col-sm-4">&copy; 2017 Oskar Graś</p>
-            <ul class="col-sm-8">
-            <li class="col-sm-1">  <img src="static/image/twitter.svg"></li>
-          <li class="col-sm-1"> <img src="static//image/facebook.svg"></li>
-          <li class="col-sm-1">  <img src="static//image/instagram.svg"></li>
-          <li class="col-sm-1">  <img src="static//image/medium.svg"></li>
-            </ul>
-          </div>
-        </footer>
-        <script src="static/js/note.js" charset="utf-8"></script>
-        </body>
-</html>
+{% endblock %}

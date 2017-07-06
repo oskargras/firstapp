@@ -1,5 +1,48 @@
 #sortable { list-style-type: none; margin: 0; padding: 0; width: 60vw; }
-#sortable li { margin: 3px 3px 3px 1; padding: 1px; width: 150px; float: left; height: 150px; font-size: 1em; text-align: center; background-color: #2184cd  }
+#sortable li { padding: 1px; width: 159px; float: left; height: 159px; font-size: 1em; text-align: center; background-color: rgba(238, 205, 115, 1);  }
+
+::-moz-selection {
+  background: #C6FF91;
+  text-shadow: none;
+}
+
+::selection {
+  background: #C6FF91;
+  text-shadow: none;
+}
+
+header a {color: black;}
+header a:visited {text-decoration: none}
+header a:active {text-decoration: none}
+header a:hover {text-decoration: underline}
+header a:link {
+    background-color: transparent;
+    text-decoration: none;
+}
+header .row,
+footer .row {
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  font-weight: 700;
+  margin: 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header p {
+  padding: 0 20px;
+  margin: 0;
+}
+
+body {
+  background: url(https://i.imgur.com/2BdQt0g.jpg);
+}
 
 .jumbotron {
   display: flex;
@@ -10,7 +53,15 @@
   text-shadow: 0.25px 0.25px 0.25px #000000;
 }
 .jumbotron h2 {
-  font-size: 60px;
+  font-size: 60px;::-moz-selection {
+  background: #C6FF91;
+  text-shadow: none;
+}
+
+::selection {
+  background: #C6FF91;
+  text-shadow: none;
+}
   font-weight: 700;
   margin: 0;
 }
@@ -22,34 +73,38 @@
 .flip {
     word-break:break-all;
     margin: 0 auto;
-    background-color: lightblue;
+    background-color: rgba(218, 165, 32, 0.8);
 }
+
 .flip img {
     width: auto;
     height: auto;
 }
+
 .flip .back {
     background: #2184cd;
     color: #fff;
     text-align: center;
 }
 
-
-footer {
-  font-size: 12px;
-  padding: 20px 0;
+.noteform {
+    width: 100%;
+    margint-left: auto;
+    margin-right: auto;
 }
 
-footer .col-sm-8 {
-  display: flex;
-  justify-content: flex-end;
+#id_text {
+    width: 95%;
+    height:250px;
+}
+.topcorner {
+  position:relative;
 }
 
-footer ul {
-  list-style: none;
-}
-
-footer li img {
-  width: 32px;
-  height: 32px;
+.ribbon {
+  width:20px;
+  height:20px;
+  position:absolute;
+  top:0;
+  right:0;
 }
