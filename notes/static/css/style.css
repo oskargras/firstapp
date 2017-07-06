@@ -1,0 +1,15 @@
+body { background-color: grey; }
+
+.flip {
+    margin: 0 auto;
+    background-color: lightblue;
+}
+.flip img {
+    width: auto;
+    height: auto;
+}
+.flip .back {
+    background: #2184cd;
+    color: #fff;
+    text-align: center;
+}

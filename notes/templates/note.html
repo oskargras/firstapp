@@ -1,14 +1,48 @@
 <!DOCTYPE html>
     <html>
         <head>
+            <title>Notes</title>
+            <link rel="stylesheet" type="text/css" href="static/css/style.css">
+            <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+            <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+            <style>
+  #sortable { list-style-type: none; margin: 0; padding: 0; width: 100vw; }
+  #sortable li { margin: 3px 3px 3px 1; padding: 1px; width: 150px; float: left; height: 150px; font-size: 1em; text-align: center; }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+  } );
+  </script>
+
+<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+            <script>
+$(function(){
+    $(".flip").flip({
+        trigger: 'click',
+        axis: 'x'
+    });
+});
+</script>
 
         </head>
 
         <body>
           <h2>Notes</h2>
-          <ul>
+          <ul id="sortable">
           {% for note in notes %}
-              <li>{{ note.text }}</li>
+              <li class="ui-state-default">
+                  <div class="flip">
+    <div class="front">
+        {{ note.text }}
+    </div>
+    <div class="back">
+        <h3>Some Text</h3>
+    </div>
+</div></li>
           {% endfor %}
         </ul>
  <form action='#' method='POST' >
