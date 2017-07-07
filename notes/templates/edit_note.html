@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% block content %}
 {% load static %}
 <section class="container">
@@ -8,12 +7,13 @@
         <h2>Create note</h2>
         <form action="/add_note" method="post" class="noteform">
             {% csrf_token %}
+            {{ note.text }}
             {{ form.as_p }}
             <button type="submit">Save</button>
         </form>
         </figure>
     </div>
-<script src="{% static "js/counter.js" %}"></script>
+<script src="{% static "js/counter2.js" %}"></script>
 </section>
 
 {% endblock %}

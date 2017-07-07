@@ -7,8 +7,11 @@
                 {% for note in notes %}
                 <li class="ui-state-default">
                     <div class="topcorner">
-                        <a href="/">
-                            <img src="static/image/edit.png" class ="ribbon"/>
+                        <a href="/update_note/{{ note.id }}">
+                            <img src="static/image/edit.png" class ="left-corn"/>
+                        </a>
+                        <a href="/del_note/{{ note.id }}">
+                            <img src="static/image/del.png" class ="ribbon"/>
                         </a>
                     </div>
                     <div class="flip">
@@ -16,7 +19,7 @@
                             {{ note.text }}
                         </div>
                         <div class="back">
-                            <h3>{{ note.id }}</h3>
+                            <h1>{{ note.id }}</h1>
                         </div>
                     </div>
                 </li>

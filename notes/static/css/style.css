@@ -1,4 +1,4 @@
-#sortable { list-style-type: none; margin: 0; padding: 0; width: 60vw; }
+#sortable { list-style-type: none; margin: 1px; padding: 0; width: 60%vw; }
 #sortable li { padding: 1px; width: 159px; float: left; height: 159px; font-size: 1em; text-align: center; background-color: rgba(238, 205, 115, 1);  }
 
 ::-moz-selection {
@@ -19,6 +19,7 @@ header a:link {
     background-color: transparent;
     text-decoration: none;
 }
+
 header .row,
 footer .row {
   display: flex;
@@ -99,6 +100,7 @@ body {
 }
 .topcorner {
   position:relative;
+  background-color: black;
 }
 
 .ribbon {
@@ -107,4 +109,11 @@ body {
   position:absolute;
   top:0;
   right:0;
+}
+.left-corn {
+  width:20px;
+  height:20px;
+  position:absolute;
+  top:0;
+  left:0px;
 }

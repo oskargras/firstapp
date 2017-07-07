@@ -16,13 +16,15 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls import url, include
 from django.contrib import admin
-from notes.views import HomeView, AddNoteView, DelNoteView
+from notes.views import HomeView, AddNoteView, DelNoteView, UpdateNote
 from django.conf.urls.static import static
+
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', HomeView.as_view(), name='home'),
     url(r'^add_note', AddNoteView.as_view()),
-    url(r'^del_note', DelNoteView.as_view()),
+    url(r'^del_note/(?P<note_id>(\d)+)', DelNoteView.as_view()),
+    url(r'^update_note/(?P<pk>[\w-]+)$', UpdateNote.as_view(), name='update_note'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

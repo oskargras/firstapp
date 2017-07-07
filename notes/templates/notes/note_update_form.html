@@ -5,12 +5,12 @@
 <section class="container">
     <div class="row">
         <figure class="col-sm-6">
-        <h2>Create note</h2>
-        <form action="/add_note" method="post" class="noteform">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Save</button>
-        </form>
+        <h2>Update note</h2>
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+            <input type="submit" value="Save">
+            </form>
         </figure>
     </div>
 <script src="{% static "js/counter.js" %}"></script>
